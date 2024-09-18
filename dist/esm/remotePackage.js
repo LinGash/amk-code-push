@@ -56,7 +56,9 @@ export class RemotePackage extends Package {
                     method: "GET",
                     filePath: file,
                     fileDirectory: Directory.Data,
-                    responseType: "blob"
+                    responseType: "blob",
+                    headers: { 'X-Fake-Header': 'SomeValue' },
+                    params: {},
                 });
             }
             catch (e) {
