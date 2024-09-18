@@ -57,8 +57,8 @@ export class RemotePackage extends Package {
                     filePath: file,
                     fileDirectory: Directory.Data,
                     responseType: "blob",
-                    headers: { 'X-Fake-Header': 'SomeValue' },
-                    params: {},
+                    // headers: { 'X-Fake-Header': 'SomeValue' }, 
+                    // params: {}, 
                 });
             }
             catch (e) {
