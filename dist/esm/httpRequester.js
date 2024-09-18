@@ -43,10 +43,10 @@ export class HttpRequester {
             headers
         };
         if (methodName === "GET") {
-            options.params = requestBody;
+            options.params = requestBody || "";
         }
         else {
-            options.data = requestBody;
+            options.data = requestBody || "";
         }
         NativeHttp.request(options).then((nativeRes) => {
             if (typeof nativeRes.data === "object")
