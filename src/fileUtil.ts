@@ -89,6 +89,7 @@ export class FileUtil {
     }
 
     public static async copy(source: GetUriOptions, destination: GetUriOptions): Promise<void> {
+        console.log("source--",source)
         await Filesystem.copy({directory: source.directory, from: source.path, to: destination.path, toDirectory: destination.directory});
     }
 

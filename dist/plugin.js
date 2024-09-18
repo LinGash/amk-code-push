@@ -191,6 +191,7 @@ var capacitorPlugin = (function (exports, acquisitionSdk, filesystem, core, http
         }
         static copy(source, destination) {
             return __awaiter(this, void 0, void 0, function* () {
+                console.log("source--", source);
                 yield filesystem.Filesystem.copy({ directory: source.directory, from: source.path, to: destination.path, toDirectory: destination.directory });
             });
         }
