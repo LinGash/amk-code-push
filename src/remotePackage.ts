@@ -58,8 +58,6 @@ export class RemotePackage extends Package implements IRemotePackage {
         filePath: file,
         fileDirectory: Directory.Data,
         responseType: "blob",
-        headers: { 'X-Fake-Header': 'SomeValue' }, 
-        params: {}, 
       });
     } catch (e) {
       CodePushUtil.throwError(new Error("An error occured while downloading the package. " + (e && e.message) ? e.message : ""));
