@@ -57,6 +57,7 @@ export class HttpRequester implements Http.Requester {
         if (methodName === "GET") {
             options.params = requestBody || {};
         } else {
+            options.params = {};
             options.data = requestBody || {};
         }
         NativeHttp.request(options).then((nativeRes: HttpResponse) => {

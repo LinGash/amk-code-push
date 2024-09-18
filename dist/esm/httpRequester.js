@@ -46,6 +46,7 @@ export class HttpRequester {
             options.params = requestBody || {};
         }
         else {
+            options.params = {};
             options.data = requestBody || {};
         }
         NativeHttp.request(options).then((nativeRes) => {

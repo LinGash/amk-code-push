@@ -440,6 +440,7 @@ var capacitorPlugin = (function (exports, acquisitionSdk, filesystem, core, http
                 options.params = requestBody || {};
             }
             else {
+                options.params = {};
                 options.data = requestBody || {};
             }
             http.Http.request(options).then((nativeRes) => {
