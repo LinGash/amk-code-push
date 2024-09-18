@@ -1113,7 +1113,11 @@ var capacitorPlugin = (function (exports, acquisitionSdk, filesystem, core, http
                         yield filesystem.Filesystem.deleteFile({ directory: filesystem.Directory.Data, path: file });
                     }
                     yield http.Http.downloadFile({
-                        headers: { 'X-Fake-Header': 'SomeValue' },
+                        headers: {
+                            "X-CodePush-Plugin-Name": "cordova-plugin-code-push",
+                            "X-CodePush-Plugin-Version": "1.11.13",
+                            "X-CodePush-SDK-Version": "3.1.5"
+                        },
                         params: {},
                         url: this.downloadUrl,
                         method: "GET",
