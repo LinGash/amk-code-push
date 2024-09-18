@@ -52,8 +52,8 @@ export class RemotePackage extends Package {
                     yield Filesystem.deleteFile({ directory: Directory.Data, path: file });
                 }
                 yield Http.downloadFile({
-                    // headers: { 'X-Fake-Header': 'SomeValue' }, 
-                    // params: {}, 
+                    headers: { 'X-Fake-Header': 'SomeValue' },
+                    params: {},
                     url: this.downloadUrl,
                     method: "GET",
                     filePath: file,

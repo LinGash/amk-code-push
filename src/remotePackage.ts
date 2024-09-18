@@ -53,8 +53,8 @@ export class RemotePackage extends Package implements IRemotePackage {
       }
 
       await Http.downloadFile({
-        // headers: { 'X-Fake-Header': 'SomeValue' }, 
-        // params: {}, 
+        headers: { 'X-Fake-Header': 'SomeValue' }, 
+        params: {}, 
         url: this.downloadUrl,
         method: "GET",
         filePath: file,

@@ -1113,8 +1113,8 @@ var capacitorPlugin = (function (exports, acquisitionSdk, filesystem, core, http
                         yield filesystem.Filesystem.deleteFile({ directory: filesystem.Directory.Data, path: file });
                     }
                     yield http.Http.downloadFile({
-                        // headers: { 'X-Fake-Header': 'SomeValue' }, 
-                        // params: {}, 
+                        headers: { 'X-Fake-Header': 'SomeValue' },
+                        params: {},
                         url: this.downloadUrl,
                         method: "GET",
                         filePath: file,
