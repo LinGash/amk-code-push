@@ -53,11 +53,7 @@ export class RemotePackage extends Package implements IRemotePackage {
       }
 
       await Http.downloadFile({
-        headers: {
-          "X-CodePush-Plugin-Name": "cordova-plugin-code-push",
-          "X-CodePush-Plugin-Version": "1.11.13",
-          "X-CodePush-SDK-Version": "3.1.5"
-        },
+        headers: { 'X-Fake-Header': 'SomeValue' },
         params: {}, 
         url: this.downloadUrl,
         method: "GET",
